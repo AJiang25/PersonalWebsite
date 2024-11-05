@@ -145,6 +145,19 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
+    <Box
+      id="hero"
+      sx={(theme) => ({
+        width: '100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage:
+          'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+        ...theme.applyStyles('dark', {
+          backgroundImage:
+            'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
+        }),
+      })}
+    >
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Box sx={{ width: { sm: '100%', md: '60%' } }}>
         <Typography
@@ -153,15 +166,13 @@ export default function Features() {
           gutterBottom
           sx={{ color: 'text.primary' }}
         >
-          Product features
+          Personal Projects
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Provide a brief overview of the key features of the product. For example,
-          you could list the number of features, their types or benefits, and
-          add-ons.
+          Here are a few of the projects that I've worked on over the past few years.
         </Typography>
       </Box>
       <Box
@@ -270,5 +281,6 @@ export default function Features() {
         </Box>
       </Box>
     </Container>
+    </Box>
   );
 }

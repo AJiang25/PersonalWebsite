@@ -7,6 +7,8 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
 
 export default function HighlightedCard() {
   const theme = useTheme();
@@ -15,26 +17,29 @@ export default function HighlightedCard() {
   return (
     <Card sx={{ height: '100%' }}>
       <CardContent>
-        <InsightsRoundedIcon />
-        <Typography
-          component="h2"
-          variant="subtitle2"
-          gutterBottom
-          sx={{ fontWeight: '600' }}
-        >
-          Explore your data
-        </Typography>
-        <Typography sx={{ color: 'text.secondary', mb: '8px' }}>
-          Uncover performance and visitor insights with our data wizardry.
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1}}>
+          <Typography
+            sx={{
+              fontWeight: '600',
+            }}
+          >
+            Upgrade with AI
+          </Typography>
+          <InsightsRoundedIcon />
+        </Box>
+        <Typography sx={{fontSize: 8, color: 'text.secondary', mb: 1}}>
+          Learn more about what Arnold has done in this area.
         </Typography>
         <Button
           variant="contained"
           size="small"
           color="primary"
+          href="https://github.com/AJiang25"
+          aria-label="GitHub"
           endIcon={<ChevronRightRoundedIcon />}
           fullWidth={isSmallScreen}
         >
-          Get insights
+          See Github
         </Button>
       </CardContent>
     </Card>

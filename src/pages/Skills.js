@@ -2,6 +2,7 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '../components/AppBar';
 import AppTheme from '../theme/AppTheme';
+import Skill from '../components/Skills'
 
 export default function Skills() {
   return (
@@ -9,7 +10,7 @@ export default function Skills() {
       <CssBaseline enableColorScheme />
       <AppBar />
       <div>
-        <h1>About Me</h1>
+        <Skill/>
       </div>
     </AppTheme>
   );

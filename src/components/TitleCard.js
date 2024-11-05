@@ -2,19 +2,16 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
 
-export default function TitleCard(title) {
-  const theme = useTheme();
-
+export default function TitleCard({title}) {
   return (
     <Card sx={{ height: '100%' }}>
       <CardContent>
         <Typography
           component="h2"
-          variant="subtitle2"
+          variant="subtitle"
           gutterBottom
-          sx={{ fontWeight: '600' }}
+          sx={{ fontWeight: '600', textAlign: 'center' , margin: 0 }}
         >
           {title}
         </Typography>

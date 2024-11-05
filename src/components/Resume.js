@@ -6,16 +6,7 @@ import { useTheme } from '@mui/system';
 import ArticleIcon from '@mui/icons-material/Article';
 import ResumePDF from '../assets/jiang_arnold_resume.pdf';
 
-const logoStyle = {
-  width: '75px',
-  height: '75px',
-  margin: '10px',
-  opacity: 0.7,
-};
-
 export default function Resume() {
-  const theme = useTheme();
-
   return (
     <Box id="resume" sx={{ py: 4 }}>
       <Typography

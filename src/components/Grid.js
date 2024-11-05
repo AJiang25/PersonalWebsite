@@ -1,25 +1,23 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import HighlightedCard from './HighlightedCard';
-import PageViewsBarChart from './PageViewsBarChart';
-import SessionsChart from './SessionsChart';
+import CoursesChart from './CoursesChart';
 import StatCard from './StatCard';
 import Container from '@mui/material/Container';
+import TitleCard from './TitleCard';
+import IntroductionCard from './Introduction';
 
-const titles = [
-    {title: 'Introduction'},
-    {title: 'Life in South Carolina'},
-    {title: 'Life at Princeton'}
-]
+const titleCards = ['Introduction', 'Projects', 'Photography'];
 
 const data = [
   {
-    title: 'Users',
-    value: '14k',
-    interval: 'Last 30 days',
+    title: 'Samples',
+    value: '200',
+    value1: 'File Directory Tree',
+    value2: 'Anagrams',
+    value3: 'Airplane Directory',
     trend: 'up',
     data: [
       200, 24, 220, 260, 240, 380, 100, 240, 280, 240, 300, 340, 320, 360, 340, 380,
@@ -27,19 +25,23 @@ const data = [
     ],
   },
   {
-    title: 'Conversions',
+    title: 'Cameras',
     value: '325',
-    interval: 'Last 30 days',
-    trend: 'down',
+    value1: 'Sony A7IV',
+    value2: 'Fujifilm X100V',
+    value3: 'Nikon D7000',
+    trend: 'neutral',
     data: [
-      1640, 1250, 970, 1130, 1050, 900, 720, 1080, 900, 450, 920, 820, 840, 600, 820,
-      780, 800, 760, 380, 740, 660, 620, 840, 500, 520, 480, 400, 360, 300, 220,
+      400, 400, 510, 530, 520, 600, 530, 520, 510, 800, 520, 510, 530, 620, 510, 530,
+      520, 410, 530, 520, 610, 530, 520, 700, 300, 420, 510, 430, 520, 510,
     ],
   },
   {
-    title: 'Event count',
+    title: 'Locations',
     value: '200k',
-    interval: 'Last 30 days',
+    value1: 'Lexington, SC',
+    value2: 'Princeton, NJ',
+    value3: 'New York, NY',
     trend: 'neutral',
     data: [
       500, 400, 510, 530, 520, 600, 530, 520, 510, 730, 520, 510, 530, 620, 510, 530,
@@ -51,7 +53,7 @@ const data = [
 export default function MainGrid() {
   return (
     <Box
-      id="hero"
+      id="About"
       sx={(theme) => ({
         width: '100%',
         backgroundRepeat: 'no-repeat',
@@ -83,36 +85,24 @@ export default function MainGrid() {
         columns={12}
         sx={{ mb: (theme) => theme.spacing(2) }}
       >
-        {data.map((titles, index) => (
-          <Grid key={index} size={{ xs: 12, sm: 6, lg: 3 }}>
-            <TitleCard {...titles} />
-          </Grid>
-        ))}
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <IntroductionCard />
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
-        </Grid>
+           {titleCards.map((title, index) => (
+              <Grid key={index} size={{ xs: 12, sm: 6, lg: 3 }}>
+                <TitleCard title={title} />
+              </Grid>
+            ))}
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+              <HighlightedCard />
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+                <IntroductionCard />
+            </Grid>
         {data.map((card, index) => (
           <Grid key={index} size={{ xs: 12, sm: 6, lg: 3 }}>
             <StatCard {...card} />
           </Grid>
         ))}
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
-        </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SessionsChart />
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <PageViewsBarChart />
+          <CoursesChart />
         </Grid>
       </Grid>
     </Box>

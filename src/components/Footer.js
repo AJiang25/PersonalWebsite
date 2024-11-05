@@ -1,16 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import axios from 'axios';
 
 function Copyright() {
   return (
@@ -24,22 +20,6 @@ function Copyright() {
 }
 
 export default function Footer() {
-  const [message, setMessage] = React.useState('');
-
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
-
-  const handleSendEmail = async () => {
-    try {
-      await axios.post('/api/send-email', { message });
-      alert('Email sent successfully!');
-      setMessage('');
-    } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email. Please try again.');
-    }
-  };
 
   return (
     <Container
@@ -75,35 +55,6 @@ export default function Footer() {
             <Link color="text.secondary" variant="body2" href="mailto:jiangarnold@princeton.edu">
               jiangarnold@princeton.edu
             </Link>
-            {/* <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="message"
-                hiddenLabel
-                size="large"
-                variant="outlined"
-                fullWidth
-                aria-label="Message"
-                placeholder="Message"
-                value={message}
-                onChange={handleMessageChange}
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': 'Message',
-                  },
-                }}
-                sx={{ width: '500px' }}
-              />
-            </Stack>
-            <Button
-                variant="contained"
-                color="primary"
-                size="small"
-                sx={{ flexShrink: 0, mt: 2 }}
-                onClick={handleSendEmail}
-            >
-                Send
-            </Button> */}
           </Box>
         </Box>
         <Box

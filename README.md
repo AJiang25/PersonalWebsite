@@ -1,47 +1,45 @@
-<<<<<<< HEAD
-# PersonalWebsite
-Arnold's personal website
-=======
-![alt text](https://sunnydatko.com/assets/logo-black-59b8ed60.svg)
+# Arnold Jiang's Personal Website
 
-# Arnold Jiang's Personal WEbsite
+Welcome to the repository for my personal website, hosted on GitHub Pages. This README provides an overview of the project and instructions for local development.
 
-Welcome to the repository for [Arnold Jiang's Personal Website]
+## About
 
-## Overview
+This website serves as my online portfolio and blog, showcasing my projects, skills, and thoughts. It's built using HTML, CSS, and JavaScript, and is hosted for free using GitHub Pages.
 
-This portfolio site serves as a comprehensive display of my expertise in web development, particularly in front-end technologies. It is designed to be responsive, accessible, and visually appealing.
+## Features
 
-## Installation
+- Responsive design for optimal viewing on various devices
+- Portfolio section highlighting my best projects
+- Blog for sharing my thoughts and experiences
+- Contact form for easy communication
 
-To run this portfolio locally:
+## Local Development
 
-1. Clone the repository:
-   ```bash
-   git clone
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd 
-   ```
+To run this website locally:
+
+1. Clone the repository: 
+`git clone https://github.com/AJiang25/PersonalWebsite.git`
+2. Navigate to the project directory: 
+`cd PersonalWebsite`
 3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+`npm install`
+4. Start the Development Page:
+`npm start`
 
-Now check http://localhost:3000.
+## Deployment
 
-### Technologies Used
+This site is automatically deployed to GitHub Pages when changes are pushed to the main branch. The live site can be accessed at: https://ajiang25.github.io/PersonalWebsite/
 
-- React: For building the user interface.
-- Vite: As a build tool for faster and more efficient development experience.
-- Material UI: For designing a modern and responsive interface.
+## Contributing
 
-### Contact
+While this is a personal website, I welcome any suggestions or bug reports. Please open an issue in this repository to provide feedback.
 
-For any questions or feedback, feel free to reach out to me at <jiangarnold@princeton.edu>.
->>>>>>> 3ead909 (Starting progress of personal website. Completed the home page.)
+## License
+
+This project is open source and available under the MIT License.
+
+## Contact
+
+If you have any questions or would like to get in touch, please feel free to reach out to me at [jiangarnold@gmail.com](mailto:jiangarnold@gmail.com).
+
+Thank you for visiting my website repository!

@@ -2,6 +2,7 @@
   "name": "arnold",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AJiang25.github.io/PersonalWebsite",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -25,6 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --max_old_space_size=8128 start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,7 +52,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/code-frame": "^7.26.2"
+    "@babel/code-frame": "^7.26.2",
+    "gh-pages": "^6.2.0"
   },
   "overrides": {
     "react-refresh": "0.11.0"

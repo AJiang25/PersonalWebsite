@@ -6,37 +6,35 @@ import Card from '@mui/material/Card';
 import MuiChip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
 import { styled } from '@mui/material/styles';
-
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import HubIcon from '@mui/icons-material/Hub';
+import FolderIcon from '@mui/icons-material/Folder';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import WordNet from '../assets/Wordnet.png';
+import DirTree from '../assets/dirtree.png';
+import Flight from '../assets/Flight.png';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
-    description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/dash-light.png")`,
-    imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/dash-dark.png")`,
+    icon: <FolderIcon />,
+    title: 'Directory File Tree',
+    description: 'Implemented file manager with various tree data structures (BDT, DT, FT). Parsed existing code, addressed bugs, and created internal validation modules.',
+    imageLight: `url(${DirTree}`,
+    imageDark: `url(${DirTree}`,
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
-    description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/mobile-light.png")`,
-    imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/mobile-dark.png")`,
+    icon: <HubIcon />,
+    title: 'Wordnet',
+    description: 'Created a semantic relationship database for English words using a rooted directed acyclic graph. Implemented modified BFS for measuring word relatedness.',
+    imageLight: `url(${WordNet}`,
+    imageDark: `url(${WordNet}`,
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
-    description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-light.png")`,
-    imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-dark.png")`,
+    icon: <FlightTakeoffIcon />,
+    title: 'Flight Directory',
+    description: 'Developed a responsive web page displaying real-time Hong Kong airport flight data. Used HTML/CSS for design, JavaScript/PHP for dynamic updates and data processing.',
+    imageLight: `url(${Flight}`,
+    imageDark: `url(${Flight}`,
   },
 ];
 

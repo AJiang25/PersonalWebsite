@@ -1,22 +1,43 @@
 import React from 'react';
 import { Grid2, Card, CardContent, Typography, LinearProgress, Chip, Box } from '@mui/material';
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import { Html5PlainWordmark, 
+        PythonOriginal, 
+        AmazonwebservicesOriginalWordmark, 
+        LinuxOriginal, 
+        DockerPlain, 
+        GitOriginal, 
+        TensorflowOriginal, 
+        AzuresqldatabasePlain, 
+        NodejsPlainWordmark, 
+        ReactOriginal,
+        COriginal,
+        CplusplusOriginal,
+        JavaOriginal,
+        ROriginal,
+        MongodbOriginal
+      } from 'devicons-react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Container from '@mui/material/Container';
 
 const skills = [
-  { name: 'JavaScript', icon: LinkedInIcon, progress: 90, tags: ['Frontend', 'Backend'] },
-  { name: 'Python', icon: LinkedInIcon, progress: 75, tags: ['Backend', 'Data Science'] },
-  { name: 'Java', icon: LinkedInIcon, progress: 70, tags: ['Backend'] },
-  { name: 'C++', icon: LinkedInIcon, progress: 50, tags: ['Systems'] },
-  { name: 'React', icon: LinkedInIcon, progress: 85, tags: ['Frontend'] },
-  { name: 'Node.js', icon: LinkedInIcon, progress: 80, tags: ['Backend'] },
-  { name: 'HTML/CSS', icon: LinkedInIcon, progress: 95, tags: ['Frontend'] },
-  { name: 'SQL', icon: LinkedInIcon, progress: 70, tags: ['Database'] },
-  { name: 'TensorFlow', icon: LinkedInIcon, progress: 10, tags: ['Machine Learning'] },
-  { name: 'Git', icon: LinkedInIcon, progress: 85, tags: ['Version Control'] },
-  { name: 'Docker', icon: LinkedInIcon, progress: 60, tags: ['DevOps'] },
-  { name: 'AWS', icon: LinkedInIcon, progress: 65, tags: ['Cloud'] },
-  { name: 'Linux', icon: LinkedInIcon, progress: 75, tags: ['Operating System'] },
+  { name: 'Java', icon: JavaOriginal, progress: 90, tags: ['Backend'] },
+  { name: 'JavaScript', icon: JavascriptIcon, progress: 60, tags: ['Frontend', 'Backend'] },
+  { name: 'Python', icon: PythonOriginal, progress: 60, tags: ['Backend', 'Data Science'] },
+  { name: 'C', icon: COriginal, progress: 50, tags: ['Systems'] },
+  { name: 'C++', icon: CplusplusOriginal, progress: 40, tags: ['Systems'] },
+  { name: 'React', icon: ReactOriginal, progress: 70, tags: ['Frontend'] },
+  { name: 'Node.js', icon: NodejsPlainWordmark, progress: 80, tags: ['Backend'] },
+  { name: 'HTML/CSS', icon: Html5PlainWordmark, progress: 95, tags: ['Frontend'] },
+  { name: 'PHP', icon: Html5PlainWordmark, progress: 30, tags: ['Frontend'] },
+  { name: 'R', icon: ROriginal, progress: 50, tags: ['Database'] },
+  { name: 'MongoDB', icon: MongodbOriginal, progress: 20, tags: ['Database', 'Data Science'] },
+  { name: 'SQL', icon: AzuresqldatabasePlain, progress: 70, tags: ['Database', 'Data Science'] },
+  { name: 'TensorFlow', icon: TensorflowOriginal, progress: 10, tags: ['Machine Learning'] },
+  { name: 'Git', icon: GitOriginal, progress: 85, tags: ['Version Control'] },
+  { name: 'Docker', icon: DockerPlain, progress: 60, tags: ['DevOps'] },
+  { name: 'AWS', icon: AmazonwebservicesOriginalWordmark, progress: 65, tags: ['Cloud'] },
+  { name: 'Linux', icon: LinuxOriginal, progress: 75, tags: ['Operating System'] },
 ];
 
 const getProgressColor = (progress) => {
@@ -79,7 +100,7 @@ const Skills = () => (
       >
   <Grid2 container spacing={2}>
     {skills.map((skill) => (
-      <Grid2 item xs={12} sm={6} md={4} lg={2} key={skill.name}>
+      <Grid2 item xs={12} sm={6} md={4} lg={2.4} key={skill.name} sx={{ width: '18.5%' }}>
         <SkillCard {...skill} />
       </Grid2>
     ))}

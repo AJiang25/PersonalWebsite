@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import CloseRoundedIcon from '@mui/icons-mgaterial/CloseRounded';
 import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -73,12 +73,12 @@ export default function AppAppBar() {
               <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/skills')}>
                 Skills
               </Button>
-              {/* <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/experience')}>
+              <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/experience')}>
                 Experience
               </Button>
               <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/hobbies')}>
                 Hobbies
-              </Button> */}
+              </Button>
             </Box>
           </Box>
           <Box
@@ -127,8 +127,8 @@ export default function AppAppBar() {
                 <MenuItem onClick={() => handleNavigation('/about')}>About</MenuItem>
                 <MenuItem onClick={() => handleNavigation('/projects')}>Projects</MenuItem>
                 <MenuItem onClick={() => handleNavigation('/skills')}>Skills</MenuItem>
-                {/* <MenuItem onClick={() => handleNavigation('/experience')}>Experience</MenuItem>
-                <MenuItem onClick={() => handleNavigation('/hobbies')}>Hobbies</MenuItem> */}
+                <MenuItem onClick={() => handleNavigation('/experience')}>Experience</MenuItem>
+                <MenuItem onClick={() => handleNavigation('/hobbies')}>Hobbies</MenuItem>
                 <Divider sx={{ my: 3 }} />
               </Box>
             </Drawer>

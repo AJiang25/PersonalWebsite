@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseRoundedIcon from '@mui/icons-mgaterial/CloseRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -63,9 +63,6 @@ export default function AppAppBar() {
                 <Typography>
                 Arnold Jiang
                 </Typography>
-              </Button>
-              <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/about')}>
-                About
               </Button>
               <Button variant="text" color="info" size="small" onClick={() => handleNavigation('/projects')}>
                 Projects

@@ -2,6 +2,9 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '../components/AppBar';
 import AppTheme from '../theme/AppTheme';
+import Exp from '../components/Experience';
+import Divider from '@mui/material/Divider';
+import Footer from '../components/Footer';
 
 export default function Experience() {
   return (
@@ -9,7 +12,10 @@ export default function Experience() {
       <CssBaseline enableColorScheme />
       <AppBar />
       <div>
-        <h1>About Me</h1>
+        <Divider/>
+        <Exp />
+        <Divider/>
+        <Footer/>
       </div>
     </AppTheme>
   );

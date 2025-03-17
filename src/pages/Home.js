@@ -6,18 +6,21 @@ import Hero from '../components/Hero';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import AppTheme from '../theme/AppTheme';
+import About from '../components/About';
 
 export default function Home(props) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
-      <AppBar />
-      <Hero />
+      <AppBar/>
+      <Hero/>
       <div>
-        <Divider />
-        <FAQ />
-        <Divider />
-        <Footer />
+        <Divider/>
+        <About/>
+        <Divider/>
+        <FAQ/>
+        <Divider/>
+        <Footer/>
       </div>
     </AppTheme>
   );

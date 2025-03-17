@@ -55,16 +55,6 @@ export default function LogoCollection() {
           >
           <MailOutlineIcon/>
           </IconButton>
-          <IconButton
-            color="inherit"
-            size="large"
-            href=""
-            aria-label="Link"
-            sx={{ alignSelf: 'center' }}
-            style={logoStyle}
-          >
-          <LinkIcon/>
-        </IconButton>
     </Box>
   );
 }

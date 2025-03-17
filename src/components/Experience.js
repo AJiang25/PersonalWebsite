@@ -1,84 +1,66 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import { BarChart } from '@mui/x-charts/BarChart';
-import { useTheme } from '@mui/material/styles';
+import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
+import { Typography, Paper } from '@mui/material';
+import AppBar from '../components/AppBar';
+import AppTheme from '../theme/AppTheme';
 
-export default function PageViewsBarChart() {
-  const theme = useTheme();
-  const colorPalette = [
-    (theme.vars || theme).palette.primary.dark,
-    (theme.vars || theme).palette.primary.main,
-    (theme.vars || theme).palette.primary.light,
-  ];
+const experiences = [
+  {
+    title: 'Incoming Software Development Intern',
+    company: 'Amazon',
+    date: 'Summer 2025',
+    description: 'Excited to back in NYC as at Amazon Advertising!',
+  },
+  {
+    title: 'Software Development Intern',
+    company: 'Amazon',
+    date: 'Summer 2024',
+    description: 'Implemented a JS front-end library to track advertiser behavioral analytics on the Amazon advertising console. Tech Stack: SQL, S3 Buckets, Amazon Redshift, AWS Glue Crawler',
+  },
+  {
+    title: 'Software Development Intern',
+    company: 'Amazon',
+    date: 'Summer 2023',
+    description: 'Developed an internal troubleshooting tool, integrating ReactJS, TypeScript, and CSS for front-end development that would make backend REST API calls to the Brand Advertising Measurements team’s API service.',
+  },
+  {
+    title: 'General Intern',
+    company: 'Bank of America',
+    date: 'Summer 2022',
+    description: 'Collaborated with local non-profits including the Boys and Girls Club of America to develop and implement business strategies that supported their mission and goals.',
+  },
+];
+
+export default function Experience() {
+  console.log('Rendering Experience component');
+  console.log('Experiences:', experiences);
 
   return (
-    <Card variant="outlined" sx={{ width: '100%' }}>
-      <CardContent>
-        <Typography component="h2" variant="subtitle2" gutterBottom>
-          Page views and downloads
-        </Typography>
-        <Stack sx={{ justifyContent: 'space-between' }}>
-          <Stack
-            direction="row"
-            sx={{
-              alignContent: { xs: 'center', sm: 'flex-start' },
-              alignItems: 'center',
-              gap: 1,
-            }}
-          >
-            <Typography variant="h4" component="p">
-              1.3M
-            </Typography>
-            <Chip size="small" color="error" label="-8%" />
-          </Stack>
-          <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-            Page views and downloads for the last 6 months
-          </Typography>
-        </Stack>
-        <BarChart
-          borderRadius={8}
-          colors={colorPalette}
-          xAxis={[
-            {
-              scaleType: 'band',
-              categoryGapRatio: 0.5,
-              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-            },
-          ]}
-          series={[
-            {
-              id: 'page-views',
-              label: 'Page views',
-              data: [2234, 3872, 2998, 4125, 3357, 2789, 2998],
-              stack: 'A',
-            },
-            {
-              id: 'downloads',
-              label: 'Downloads',
-              data: [3098, 4215, 2384, 2101, 4752, 3593, 2384],
-              stack: 'A',
-            },
-            {
-              id: 'conversions',
-              label: 'Conversions',
-              data: [4051, 2275, 3129, 4693, 3904, 2038, 2275],
-              stack: 'A',
-            },
-          ]}
-          height={250}
-          margin={{ left: 50, right: 0, top: 20, bottom: 20 }}
-          grid={{ horizontal: true }}
-          slotProps={{
-            legend: {
-              hidden: true,
-            },
-          }}
-        />
-      </CardContent>
-    </Card>
+    <AppTheme>
+      <CssBaseline enableColorScheme />
+      <AppBar />
+      <div style={{ padding: '150px'}}>
+        <Typography variant="h2" gutterBottomsx>My Experience</Typography>
+        <Timeline position="alternate">
+          {experiences.map((exp, index) => (
+            <TimelineItem key={index}>
+              <TimelineSeparator>
+                <TimelineDot color="primary" />
+                {index !== experiences.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              <TimelineContent>
+                <Paper elevation={3} style={{ padding: '16px' }}>
+                  <Typography variant="h6" component="h1">{exp.title}</Typography>
+                  <Typography>{exp.company}</Typography>
+                  <Typography color="textSecondary">{exp.date}</Typography>
+                  <Typography>{exp.description}</Typography>
+                </Paper>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </div>
+    </AppTheme>
   );
 }

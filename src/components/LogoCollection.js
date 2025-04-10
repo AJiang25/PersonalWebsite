@@ -5,7 +5,7 @@ import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import IconButton from '@mui/material/IconButton';
-import LinkIcon from '@mui/icons-material/Link';
+
 
 const logoStyle = {
   width: '75px',

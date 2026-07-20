@@ -1,6 +1,6 @@
 # Arnold Jiang's Personal Website
 
-Welcome to the repository for my personal website, hosted on GitHub Pages. This README provides an overview of the project and instructions for local development.
+Welcome to the repository for my old personal website, hosted on GitHub Pages. This README provides an overview of the project and instructions for local development. Please see my new updated personal website for more recent information.
 
 ## About
 
